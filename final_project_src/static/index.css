@@ -117,3 +117,7 @@ g .x-axis {
     color: white;
     margin: 20px;
 }
+
+#section-footer a:hover {
+    color: rgb(230, 188, 75);
+}
