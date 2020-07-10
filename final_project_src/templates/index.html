@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href={{ url_for( 'static', filename="favicon-16x16.png" ) }} />
+
+    <!-- Bootstrap CSS -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href={{ url_for( 'static', filename='index.css' ) }}>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- Website banner -->
+    <nav id='section0' class="navbar navbar-dark bg-success ">
+        <a class="navbar-brand" href="#">
+            <img src={{ url_for( 'static', filename="favicon-32x32.png" ) }} /> DATS6401 Final Project By Junhe Zhang
+        </a>
+    </nav>
+    <!-- side navigation bar -->
+    <div id='side-navbar' class="card border-info mb-3" style="max-width: 12rem;">
+        <div class="card-header">Visualization:</div>
+        <div class="card-body text-info">
+            <a href="#section0">Abstraction</a>
+            <a href="#section1">Correlation</a>
+            <a href="#section2">Tendency Chart</a>
+            <a href="#section3">Prediction Plot</a>
+            <a href="#section4">Coefficient Plot</a>
+            <a href="#section0">Go Top</a>
+        </div>
+    </div>
+    <!-- body container -->
+    <div id='page-body'>
+        <!-- abstract container -->
+        <div id='abstraction'>
+            <img class='stock' src={{ url_for( 'static', filename="stock.jpg" ) }} " alt=" ">
+            <h3 style='text-align: left;'>Abstract:</h3>
+
+                <p style="position: relative; top: 50px; ">
+                    The objective of this study is to use machine learning approach to analysis complex company financial data in order to target the most important features among them, so that people who are new to stock market investment can gain some general perspective. The following study will use Apple Inc. as an example.
+                </p>
+        </div>
+<!-- correlation plot container -->
+        <div id='section1'>
+            <h1>
+                Compare Correlation between Apple Inc. Financial data with Close Stock Price Data
+            </h1>
+            <div id='section1dropdown'>
+                <span id='y-menu'>Y:</span> VS.
+                <span id='x-menu'>X:</span>
+            </div>
+            <svg class='section1-scatter' width='1000' height='600'></svg>
+        </div>
+        <!-- tendency plot container -->
+        <div id='section2'>
+            <h1>
+                Visualize the tendency of Top 10 important independent factors in Data Model
+            </h1>
+            <div id='line-chart'></div>
+        </div>
+        <!-- prediction vs. actual container -->
+        <div id='section3'>
+            <h1>
+                Apply the trained data model on last 10 years Financial data
+            </h1>
+            <div id='scatter-plot'></div>
+        </div>
+        <!-- coefficient container -->
+        <div id='section4'>
+            <h1>
+                Visualize the coefficients of Top 10 important factors in Data Model
+            </h1>
+            <div id='bar-chart'></div>
+        </div>
+    </div>
+    <!-- Footer Banner -->
+    <div id='section-footer'>
+        <h4>Data Source</h4>
+        <a href="https://finance.yahoo.com/quote/AAPL/financials?p=AAPL&guccounter=1&guce_referrer=aHR0cHM6Ly9maW5hbmNlLnlhaG9vLmNvbS8&guce_referrer_sig=AQAAABqKxIX6q13LWhxwDDZFISx4dS80sWbpf5m8r_LuPRig-RAPhxH1YViKFMhZbR_6JFD0EFLx4g6yA7PFf-ANHldb5cwbtMVp8h2k44ooX0jrvG-chR92U2i7glFmFLSblEpnAddCi2uEOv57OiJ1tVEWY8wCSSPyZuz6FWWa4enX
+                " target="_blank ">Yahoo Finance</a>
+        <a href="https://docs.google.com/spreadsheets/d/1wA5mOwLrGa0XUA_tCZdSEpQmS1scHmEedl8IHztN4i8/edit?usp=sharing " target="_blank ">Scatter Data</a>
+        <a href="https://docs.google.com/spreadsheets/d/1gzTLDUEyyBWhruy6_JXC3-pWUGcOKaHTgYDm6duYjkg/edit?usp=sharing " target="_blank ">Line Data</a>
+        <a href="https://docs.google.com/spreadsheets/d/1iw0POFzNz6wsvbdUW7X0VTzU727s2EjPkadmvFuIl6I/edit?usp=sharing " target="_blank ">Bar Chart Data</a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://d3js.org/d3.v5.min.js "></script>
+    <!-- <script  type='module' src="{{ url_for( 'static', filename='dropdownMenu.js' ) }} "></script>
+    <script  type='module' src="{{ url_for( 'static', filename='scatterPlot.js' ) }} "></script> -->
+    <script  type='module' src="{{ url_for( 'static', filename='index.js' ) }} "></script>
+</body>
+
+</html>

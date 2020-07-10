@@ -1,0 +1,119 @@
+html {
+    /* height: 100%;
+    margin: auto; */
+    overflow: scroll
+}
+
+h1,
+h2,
+h3,
+h5 {
+    text-align: center;
+    margin-top: 2rem;
+    /* margin-bottom: 1rem; */
+    position: relative;
+    top: 50px;
+}
+
+#abstraction,
+#section1dropdown,
+#section1,
+#section2,
+#section3,
+#section4 {
+    margin-top: 2.2rem;
+}
+
+.stock {
+    width: 960px;
+    height: 450px;
+}
+
+#side-navbar {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+}
+
+#side-navbar a {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#page-body {
+    height: 100%;
+    margin: auto;
+    /* overflow: scroll; */
+    width: 960px;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+#section1 circle {
+    fill: #4682b4;
+    opacity: 0.3;
+}
+
+text {
+    font-family: sans-serif;
+}
+
+.tick text {
+    font-size: 0.6rem;
+    fill: #635F5D;
+}
+
+.tick line {
+    stroke: #C0C0BB;
+}
+
+g .y-axis,
+g .x-axis {
+    font-size: 5px;
+}
+
+.axis-label {
+    font-size: 5em;
+    fill: #8E8883;
+}
+
+.title {
+    font-size: 3.0em;
+    fill: #635F5D;
+}
+
+#section1dropdown {
+    font-size: 1.3rem;
+    position: relative;
+    top: 25px;
+    text-align: center;
+}
+
+#section1dropdown select {
+    font-size: 1.3rem;
+}
+
+#section1dropdown select option {
+    font-size: 1.3rem;
+}
+
+#section-footer {
+    background-color: darkcyan;
+    padding: 40px;
+    text-align: center;
+}
+
+#section-footer h4 {
+    color: wheat;
+}
+
+#section-footer a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
